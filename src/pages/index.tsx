@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import styles from '../../styles/Home.module.css'
 import { MainLayout } from '../layout/MainLayout'
 import { AnimatePresence, motion } from 'framer-motion'
+import { UpsideDownLayout } from '../layout/UpsideDownLayout'
 
 export default function Home() {    
 
@@ -34,7 +35,7 @@ export default function Home() {
       <AnimatePresence>
       {!upsideDown &&(
         <motion.div
-          animate = {{ rotate: rotate ? 180 : 0}}
+          animate = {{ rotate: rotate ? 180 : 0 }}
           transition={{ type: "tween", duration: 5 }}
         >        
           <MainLayout>
@@ -51,11 +52,11 @@ export default function Home() {
           animate = {{ rotate: rotate ? 180 : 0}}
           transition={{ type: "tween", duration: 5 }}      
         >        
-          <MainLayout>
+          <UpsideDownLayout>
             <Center>              
               <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box>
             </Center>
-          </MainLayout>
+          </UpsideDownLayout>
         </motion.div>
       )}
       </AnimatePresence>

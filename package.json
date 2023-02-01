@@ -18,11 +18,13 @@
     "@types/react-dom": "18.0.9",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
+    "flip-text": "^1.2.0",
     "font-awesome": "^4.7.0",
     "framer-motion": "^8.5.5",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-flip-toolkit": "^7.0.17",
     "react-icons": "^4.7.1",
     "typescript": "4.9.4"
   }
