@@ -1,10 +1,27 @@
-import { Box, Center, Text } from '@chakra-ui/react'
+import { Box, Center, Fade, Text } from '@chakra-ui/react'
 import Head from 'next/head'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styles from '../../styles/Home.module.css'
 import { MainLayout } from '../layout/MainLayout'
+import { AnimatePresence, motion } from 'framer-motion'
 
-export default function Home() {  
+export default function Home() {    
+
+  const [rotate, setRotate] = useState(false);
+
+  const [upsideDown, setUpsideDown] = useState(false);  
+
+  const changeRotate = () => {
+    setTimeout(function() {
+      setRotate(!rotate)
+    }, 0)
+  }
+
+  const changeSide = () => {
+    setTimeout(function() {
+      setUpsideDown(!upsideDown)
+    }, 2500)
+  }
 
   return (
     <>
@@ -14,11 +31,34 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <MainLayout>
-        <Center>
-          <Text>CONTENT HERE</Text>
-        </Center>
-      </MainLayout>
+      <AnimatePresence>
+      {!upsideDown &&(
+        <motion.div
+          animate = {{ rotate: rotate ? 180 : 0}}
+          transition={{ type: "tween", duration: 5 }}
+        >        
+          <MainLayout>
+            <Center>
+              <Text>CONTENT HERE</Text>
+              <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box>
+            </Center>
+          </MainLayout>
+        </motion.div>
+      )}
+
+      {upsideDown &&(
+        <motion.div
+          animate = {{ rotate: rotate ? 180 : 0}}
+          transition={{ type: "tween", duration: 5 }}      
+        >        
+          <MainLayout>
+            <Center>              
+              <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box>
+            </Center>
+          </MainLayout>
+        </motion.div>
+      )}
+      </AnimatePresence>
     </>
   )
 }

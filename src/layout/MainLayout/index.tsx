@@ -16,7 +16,7 @@ export function MainLayout({ children }: MainLayoutProps) {
         <Header>                    
           {/* LOGO */}
 
-          <Box w='20%' text-align='center'>
+          <Box w='20%' textAlign='center'>
             <Box as='button'>
               <Text fontSize={'36px'} color='white'>LOGO</Text>
             </Box>
