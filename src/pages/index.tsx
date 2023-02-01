@@ -33,13 +33,14 @@ export default function Home() {
       </Head>
 
       <AnimatePresence>
+      {/* WEB DEV */}
       {!upsideDown &&(
         <motion.div
           animate = {{ rotate: rotate ? 180 : 0 }}
           transition={{ type: "tween", duration: 5 }}
         >        
           <MainLayout>
-            <Center>
+            <Center minH='650px' bgGradient='linear(to-r, blue.900, blue, blue.900)'>
               <Text>CONTENT HERE</Text>
               <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box>
             </Center>
@@ -47,6 +48,7 @@ export default function Home() {
         </motion.div>
       )}
 
+      {/* GAME DEV */}
       {upsideDown &&(
         <motion.div
           animate = {{ rotate: rotate ? 180 : 0}}

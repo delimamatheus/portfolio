@@ -38,3 +38,10 @@ export const theme = extendTheme({
     },
   },
 });
+
+export const webDevTheme = extendTheme({
+  colors: {
+    primary: "#845EC2",
+    secondary: "#FF6F91"
+  }
+})

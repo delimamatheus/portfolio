@@ -8,7 +8,7 @@ interface HeaderProps extends BoxProps {
 
 export function Header( { children }: HeaderProps) {
   return (
-    <Center as='header'>
+    <Center as='header' position='absolute' w='100%'>
       <Box w='90%'>
         <Center bgColor='black' boxShadow='lg' borderBottomRadius='10px' opacity='40%' h='80px'>
           <Flex w='100%' alignItems={'center'}>
