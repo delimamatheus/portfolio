@@ -8,14 +8,11 @@ interface HeaderProps extends BoxProps {
 
 export function Header( { children }: HeaderProps) {
   return (
-    <Center as='header' style={{transform: "rotate(180deg)"}}>
+    <Center as='header' position='absolute' w='100%'>
       <Box w='90%'>
-        <Center bgColor='black' boxShadow='lg' borderBottomRadius='10px' opacity='40%' h='80px'>
-          <Flex w='100%' alignItems={'center'}>
-              {/* <Text fontSize={'36px'}>HEADER</Text> */}
-              {children}
-          </Flex>
-        </Center>
+        <Flex w='100%' alignItems={'center'} bgColor='black' boxShadow='lg' borderBottomRadius='10px' opacity='40%' h='80px'>
+            {children}
+        </Flex>
       </Box>
     </Center>
   )

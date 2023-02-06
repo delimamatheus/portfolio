@@ -16,57 +16,58 @@ export function UpsideDownLayout({ children }: UpsideDownLayoutProps) {
 
   return (
     <>            
-        <Footer />
-
-        <Content>{children}</Content>
-
-        <Header>
+        <Box style={{transform: "rotate(180deg)"}}>
+        <Header>                    
           {/* LOGO */}
-            <Box w='20%' textAlign='center'>
-              <Box as='button' >
-                  <Text fontSize={'36px'} color='white'>LOGO</Text>              
-              </Box>
+          <Box w='20%' textAlign='center'>
+            <Box as='button'>
+              <Text fontSize={'36px'} color='white'>LOGO</Text>
             </Box>
+          </Box>
 
-            {/* Buttons */}
+          {/* Buttons */}
 
-            <Box w='60%' display='flex' flexDirection='row' justifyContent='center'>
-              <Box as='button' w='120px'>
-                <Text color='white' fontSize={'20px'} textAlign='center'>Início</Text>
-              </Box>
-              <Box as='button' w='120px'>
-                <Text color='white' fontSize={'20px'} textAlign='center'>Sobre Mim</Text>
-              </Box>
-              <Box as='button' w='120px'>
-                <Text color='white' fontSize={'20px'} textAlign='center'>Serviços</Text>
-              </Box>
-              <Box as='button' w='120px'>
-                <Text color='white' fontSize={'20px'} textAlign='center'>Portfólio</Text>
-              </Box>
-              <Box as='button' w='120px'>
-                <Text color='white' fontSize={'20px'} textAlign='center'>Contato</Text>
-              </Box>
+          <Box w='60%' display='flex' flexDirection='row' justifyContent='center'>
+            <Box as='button' w='120px'>
+              <Text color='white' fontSize={'20px'} textAlign='center'>Início</Text>
             </Box>
-
-            {/* Social Medias */}
-
-            <Box w='20%' display='flex' flexDirection='row' justifyContent='center'>
-              <Box>
-                <Icon color='white' as={FaLinkedin} />
-              </Box>
-              <Box>
-                <Icon color='white' as={FaGithubSquare} />
-              </Box>
-              <Box>
-                <Icon color='white' as={FaInstagramSquare} />
-              </Box>
-              <Box>
-                <Icon color='white' as={FaYoutubeSquare} />
-              </Box>
+            <Box as='button' w='120px'>
+              <Text color='white' fontSize={'20px'} textAlign='center'>Sobre Mim</Text>
             </Box>
+            <Box as='button' w='120px'>
+              <Text color='white' fontSize={'20px'} textAlign='center'>Serviços</Text>
+            </Box>
+            <Box as='button' w='120px'>
+              <Text color='white' fontSize={'20px'} textAlign='center'>Portfólio</Text>
+            </Box>
+            <Box as='button' w='120px'>
+              <Text color='white' fontSize={'20px'} textAlign='center'>Contato</Text>
+            </Box>
+          </Box>
+
+          {/* Social Medias */}
+
+          <Box w='20%' display='flex' flexDirection='row' justifyContent='center'>
+            <Box>
+              <Icon color='white' as={FaLinkedin} />
+            </Box>
+            <Box>
+              <Icon color='white' as={FaGithubSquare} />
+            </Box>
+            <Box>
+              <Icon color='white' as={FaInstagramSquare} />
+            </Box>
+            <Box>
+              <Icon color='white' as={FaYoutubeSquare} />
+            </Box>
+          </Box>
 
         </Header>
 
+        <Content>{children}</Content>
+        
+        <Footer />
+        </Box>
         
     </>
   );

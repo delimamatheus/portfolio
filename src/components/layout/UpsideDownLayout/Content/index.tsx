@@ -6,7 +6,7 @@ interface ContentProps extends BoxProps {
 
 export function Content({ children, ...rest }: ContentProps) {
   return (
-    <Box as="main" style={{transform: "rotate(180deg)"}} minH="500px" {...rest}>
+    <Box as="main" minH="500px" {...rest}>
       {children}
     </Box>
   );

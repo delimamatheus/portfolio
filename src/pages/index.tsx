@@ -40,7 +40,7 @@ export default function Home() {
           transition={{ type: "tween", duration: 5 }}
         >        
           <MainLayout>
-            <Center minH='650px' bgGradient='linear(to-r, blue.900, blue, blue.900)'>
+            <Center minH='650px' bgGradient='linear(to-r, blue.900, blue.400, blue.900)'>
               <Text>CONTENT HERE</Text>
               <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box>
             </Center>
@@ -55,7 +55,7 @@ export default function Home() {
           transition={{ type: "tween", duration: 5 }}      
         >        
           <UpsideDownLayout>
-            <Center>              
+            <Center minH='650px' bgGradient='linear(to-r, red.900, red.400, red.900)'>              
               <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box>
             </Center>
           </UpsideDownLayout>

@@ -2,7 +2,7 @@ import { Center, Flex, Grid, GridItem, Text, Box } from '@chakra-ui/layout'
 
 export function Footer() {
   return (
-    <Center as='footer' style={{transform: "rotate(180deg)"}}>
+    <Center as='footer'>
       <Box        
         display={'flex'}
         flexDirection='row'
