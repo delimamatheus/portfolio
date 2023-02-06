@@ -45,7 +45,7 @@ export default function Home() {
             <Center minH='650px' bgGradient='linear(to-r, blue.900, blue.400, blue.900)'>
               <Box display='flex' flexDirection='row' alignItems='center'>
                 <Box p='10%' maxW='60%'>
-                  <Text as='h1' fontSize='36px' textAlign='center'>Hey, what's up</Text>
+                  <Text as='h1' fontSize='36px' textAlign='center'>Hey</Text>
                   <Text fontSize='20px' textAlign='left'>Empresa focada em desenvolvimento de páginas Web como Landing Pages, E-Commerce e Páginas Institucionais</Text>
                   <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box> 
                 </Box>
@@ -54,9 +54,11 @@ export default function Home() {
                 </Box>                                
               </Box>
             </Center>
-            <Box>
-
-            </Box>
+            <Center>
+              <Box as='h1' mt='20px'>
+                <Text fontSize='66px'>Sobre Mim</Text>
+              </Box>
+            </Center>
           </MainLayout>
         </motion.div>
       )}
@@ -71,7 +73,7 @@ export default function Home() {
             <Center minH='650px' bgGradient='linear(to-r, red.900, red.400, red.900)'>
             <Box display='flex' flexDirection='row' alignItems='center'>
                 <Box p='10%' maxW='60%'>
-                  <Text as='h1' fontSize='36px' textAlign='center'>Hey, what's up</Text>
+                  <Text as='h1' fontSize='36px' textAlign='center'>Hey, whats up</Text>
                   <Text fontSize='20px' textAlign='left'>Empresa focada em desenvolvimento de jogos</Text>
                   <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box> 
                 </Box>
