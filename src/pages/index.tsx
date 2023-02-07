@@ -43,13 +43,13 @@ export default function Home() {
         >        
           <MainLayout>
             <Center minH='650px' bgGradient='linear(to-r, blue.900, blue.400, blue.900)'>
-              <Box display='flex' flexDirection='row' alignItems='center'>
-                <Box p='10%' maxW='60%'>
+              <Box w='90%' display='flex' flexDirection='row' alignItems='center'>
+                <Box pl='3%' w='50%'>
                   <Text as='h1' fontSize='36px' textAlign='center'>Hey</Text>
                   <Text fontSize='20px' textAlign='left'>Empresa focada em desenvolvimento de páginas Web como Landing Pages, E-Commerce e Páginas Institucionais</Text>
                   <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box> 
                 </Box>
-                <Box pl='1%'>
+                <Box pl='10%'>
                   <Image alt='Matheus de Lima' src={me} w='100%'></Image>
                 </Box>                                
               </Box>
@@ -71,15 +71,20 @@ export default function Home() {
         >        
           <UpsideDownLayout>
             <Center minH='650px' bgGradient='linear(to-r, red.900, red.400, red.900)'>
-            <Box display='flex' flexDirection='row' alignItems='center'>
-                <Box p='10%' maxW='60%'>
-                  <Text as='h1' fontSize='36px' textAlign='center'>Hey, whats up</Text>
+            <Box w='90%' display='flex' flexDirection='row' alignItems='center'>
+                <Box pl='3%' w='50%'>
+                  <Text as='h1' fontSize='36px' textAlign='center'>Hey</Text>
                   <Text fontSize='20px' textAlign='left'>Empresa focada em desenvolvimento de jogos</Text>
                   <Box as='button' onClick={() => { changeRotate(), changeSide() }}>click here</Box> 
                 </Box>
-                <Box pl='1%'>
+                <Box pl='10%'>
                   <Image alt='Matheus de Lima' src={me} w='100%'></Image>
                 </Box>                                
+              </Box>
+            </Center>
+            <Center>
+              <Box as='h1' mt='20px'>
+                <Text fontSize='66px'>Sobre Mim</Text>
               </Box>
             </Center>
           </UpsideDownLayout>
