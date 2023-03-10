@@ -7,11 +7,11 @@
 import { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 
-import { webDevTheme } from "../../styles/themes";
+import { theme } from "../../styles/themes";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={webDevTheme}>
+    <ChakraProvider theme={theme}>
         <Component {...pageProps} />
     </ChakraProvider>
   );
